@@ -21,18 +21,25 @@ text or evidence and honest about gaps. Works on two kinds of subject:
 /intent path/to/file                       # change mode: file or feature area
 ```
 
-Output in the user's language, using the mode's skeleton:
+Output in the user's language, using the mode's skeleton.
 
+Text mode:
 ```
-Text mode                                   Change mode
-**Situation** — who writes to whom, about    **Before** — what was true before (stated)
-  what (stated)                              **Problem** — what broke or was missing;
-**What they want** — 1. <ask> (quote) ...      measured impact with host and date
-**Why** — reason, quoted or "not stated"     **What the change achieves** — 1. <outcome>
-**Constraints** — deadline, scope, conditions  (stated: <source>) 2. ... (inferred from ...)
-**One line** — the intent in one sentence    **One line** — the intent in one sentence
-**Unclear** — ambiguities, contradictions,   **Unknown / conflicting** — unsourced motives,
-  or "none found"                              doc-vs-truth conflicts, or "none found"
+**Situation** — who writes to whom, about what (stated)
+**What they want** — 1. <ask> (quote) 2. <ask> (quote)
+**Why** — reason, quoted or "not stated"
+**Constraints** — deadline, scope, conditions
+**One line** — the intent in one sentence
+**Unclear** — ambiguities and contradictions, or "none found"
+```
+
+Change mode:
+```
+**Before** — what was true before (stated)
+**Problem** — what broke or was missing; measured impact with host and date
+**What the change achieves** — 1. <outcome> (stated: <source>) 2. <outcome> (inferred from <source>)
+**One line** — the intent in one sentence
+**Unknown / conflicting** — unsourced motives, doc-vs-truth conflicts, or "none found"
 ```
 
 ## Workflow

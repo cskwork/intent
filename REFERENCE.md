@@ -11,6 +11,7 @@ Use when the subject is prose: a message, spec, email, meeting note, clause, log
    constraints (deadlines, limits, dependencies), and what happens if not done.
 4. Flag ambiguity explicitly: pronouns without referents, undefined terms, two asks that
    conflict, and tone that suggests an unstated ask (urgency, escalation, blame).
+
 ## Change mode — evidence ladder
 
 Climb from the most authoritative source to the least. Cite the rung for every claim.
