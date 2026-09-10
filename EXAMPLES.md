@@ -1,4 +1,30 @@
-# intent — worked example
+# intent — worked examples
+
+## Example 1 — text mode
+
+Subject: a long, rambling message from a project manager, pasted by the user.
+
+> "...as discussed we still have the issue from last week and the client keeps asking, I
+> think the dashboard numbers are off again but not sure if it's the same thing as the
+> report thing, anyway can we get something before the Thursday call, doesn't have to be
+> perfect, also the export they asked for last month..."
+
+**Situation** — A project manager writing to the developer about a client complaint, ahead of a Thursday client call (stated).
+
+**What they want**
+1. Something showable about the dashboard numbers before Thursday (stated: "can we get something before the Thursday call").
+2. A judgment on whether the dashboard issue and the "report thing" are the same defect (inferred from "not sure if it's the same thing"; they did not ask directly).
+3. Status on last month's export request (stated, but no deadline given).
+
+**Why** — The client keeps asking (stated). Which issue "from last week" is meant is not stated.
+
+**Constraints** — Thursday; "doesn't have to be perfect" lowers the bar to a partial fix or an explanation.
+
+**One line** — They need a credible answer about the dashboard numbers for Thursday, and secondarily want the two open issues triaged.
+
+**Unclear** — "the issue from last week" and "the report thing" have no referent; the export request has no owner or date. Ask which issue before starting.
+
+## Example 2 — change mode
 
 Subject: a bug ticket that changed how a dashboard classifies "strong" and "weak" concepts.
 

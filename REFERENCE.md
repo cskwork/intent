@@ -1,5 +1,32 @@
 # intent — reference
 
+## Text mode
+
+Use when the subject is prose: a message, spec, email, meeting note, clause, log excerpt, thread.
+
+1. Read the whole text once. Mark every sentence that asks for something, sets a condition,
+   or gives a reason. Everything else is context.
+2. Identify the parties: author, addressee, and whose interest each sentence serves.
+3. Reconstruct the intent: what they want (asks), why (reasons, quoted), under what
+   constraints (deadlines, limits, dependencies), and what happens if not done.
+4. Flag ambiguity explicitly: pronouns without referents, undefined terms, two asks that
+   conflict, and tone that suggests an unstated ask (urgency, escalation, blame).
+5. Label claims the same way as change mode: `stated` (quote), `inferred` (from which
+   sentence and why), `unknown`.
+
+Text-mode skeleton:
+
+```
+**Situation** — <who is writing to whom, about what, stated>
+**What they want** — 1. <ask> (quote) 2. <ask> (quote)
+**Why** — <reason, quoted or "not stated">
+**Constraints** — <deadline, scope, conditions>
+**One line** — <the intent in one sentence>
+**Unclear** — <ambiguities and contradictions>, or "none found"
+```
+
+## Change mode
+
 ## Evidence ladder
 
 Climb from the most authoritative source to the least. Cite the rung for every claim.
