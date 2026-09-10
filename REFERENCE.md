@@ -11,23 +11,7 @@ Use when the subject is prose: a message, spec, email, meeting note, clause, log
    constraints (deadlines, limits, dependencies), and what happens if not done.
 4. Flag ambiguity explicitly: pronouns without referents, undefined terms, two asks that
    conflict, and tone that suggests an unstated ask (urgency, escalation, blame).
-5. Label claims the same way as change mode: `stated` (quote), `inferred` (from which
-   sentence and why), `unknown`.
-
-Text-mode skeleton:
-
-```
-**Situation** — <who is writing to whom, about what, stated>
-**What they want** — 1. <ask> (quote) 2. <ask> (quote)
-**Why** — <reason, quoted or "not stated">
-**Constraints** — <deadline, scope, conditions>
-**One line** — <the intent in one sentence>
-**Unclear** — <ambiguities and contradictions>, or "none found"
-```
-
-## Change mode
-
-## Evidence ladder
+## Change mode — evidence ladder
 
 Climb from the most authoritative source to the least. Cite the rung for every claim.
 
@@ -44,30 +28,8 @@ Rules for the ladder:
 
 - A lower rung may not override a higher one. If code (3) contradicts the ticket (1),
   report the contradiction; do not decide which is "right" unless the user asks.
-- A citation to a decision ("per plan v1.1", "as agreed") is not evidence until you find
-  the decision itself. Missing decisions are the most common root of a wrong intent.
 - Revert history matters. `git log --follow` on the file and search the ticket key in
   all branches before claiming what production has.
-
-## Claim labels
-
-| Label | Meaning | Required form |
-|---|---|---|
-| stated | Someone wrote this down | Quote or cite `source:line` |
-| inferred | You concluded it from evidence | "inferred from <rung>: <why>" |
-| unknown | No source found | Say "not stated" — never fill the gap |
-
-## Output skeleton
-
-```
-**Before** — <one or two sentences, stated>
-**Problem** — <what broke or was missing>. <measured impact, with host and date if from data>
-**What the change achieves**
-1. <outcome> (stated: <source>)
-2. <outcome> (inferred from <source>)
-**One line** — <intent in a single sentence>
-**Unknown / conflicting** — <gaps and doc-vs-truth conflicts>, or "none found"
-```
 
 ## Pitfalls
 
@@ -75,7 +37,6 @@ Rules for the ladder:
 - "Improvement" and "refactor" in a commit title are placeholders, not reasons. Dig one rung higher.
 - Do not assume the newest document is the correct one. Check which one the ticket points to.
 - Measured numbers go in a table or on their own line, never buried in prose.
-- When the user is thinking out loud, deliver the assessment and stop. Do not start fixing.
 
 ## Subject resolution
 
@@ -85,4 +46,4 @@ Rules for the ladder:
 | `PROJ-123` | Ticket first (rung 1), then commits mentioning the key |
 | `a1b2c3d`, `A..B` | Commit range; ticket keys found in messages become rung 1 |
 | path | `git log --follow` on the path, most recent ticket-linked change first |
-| free text | Search tickets, commit messages, and docs for the phrase; confirm the match with the user if more than one fits |
+| short phrase (not a pasted document) | Search tickets, commit messages, and docs for the phrase; confirm the match with the user if more than one fits |

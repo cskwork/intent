@@ -16,23 +16,29 @@ text or evidence and honest about gaps. Works on two kinds of subject:
 ```
 /intent <paste a long or confusing text>   # text mode
 /intent                                    # change mode: work of the current session
-/intent A20-1305 | HEAD~3..HEAD | src/x    # change mode: ticket, commits, path
+/intent PROJ-123                           # change mode: ticket
+/intent HEAD~3..HEAD                       # change mode: commit range
+/intent path/to/file                       # change mode: file or feature area
 ```
 
-Output (in the user's language):
+Output in the user's language, using the mode's skeleton:
 
-1. **Background** — what situation the author or change starts from.
-2. **Intent** — what they want and why. Text mode: the ask, the reason, the constraints.
-   Change mode: the problem it fixes, with measured impact when available.
-3. **What it achieves / what they need from you** — numbered, each tied to a source.
-4. **One-line summary** — the intent in a single sentence.
-5. **Unknown / conflicting** — motives you could not source, ambiguities, and places
-   where the text or documents contradict themselves or the source of truth.
+```
+Text mode                                   Change mode
+**Situation** — who writes to whom, about    **Before** — what was true before (stated)
+  what (stated)                              **Problem** — what broke or was missing;
+**What they want** — 1. <ask> (quote) ...      measured impact with host and date
+**Why** — reason, quoted or "not stated"     **What the change achieves** — 1. <outcome>
+**Constraints** — deadline, scope, conditions  (stated: <source>) 2. ... (inferred from ...)
+**One line** — the intent in one sentence    **One line** — the intent in one sentence
+**Unclear** — ambiguities, contradictions,   **Unknown / conflicting** — unsourced motives,
+  or "none found"                              doc-vs-truth conflicts, or "none found"
+```
 
 ## Workflow
 
-1. **Fix the subject and mode.** Pasted prose → text mode. Ticket key, commit, path,
-   or nothing → change mode. If two readings lead to different explanations, ask one
+1. **Fix the subject and mode.** Pasted document or message → text mode. Ticket key,
+   commit, path, nothing, or a short phrase naming a feature → change mode. If two readings lead to different explanations, ask one
    question; otherwise state the reading and proceed.
 2. **Gather evidence** (see [REFERENCE.md](REFERENCE.md)).
    Text mode: the text itself, then who wrote it, to whom, when, and what they replied
@@ -44,7 +50,7 @@ Output (in the user's language):
    ("aligned with plan v1.1"), find that decision. If it does not exist, say so — that
    absence is usually the real intent story.
 5. **Quantify the pain when cheap.** A count from a DB, log, or test run makes the
-   problem concrete. Read-only queries only; never write.
+   problem concrete.
 6. **Write for the reader.** Lead with the outcome. Plain language first, identifiers
    below. Keep code out of prose; put queries and commands in fenced blocks.
 
@@ -57,4 +63,4 @@ Output (in the user's language):
 - Report out-of-scope problems found on the way as recommendations, not fixes.
 - Read-only. This skill never edits files, commits, or posts.
 
-See [EXAMPLES.md](EXAMPLES.md) for a worked example.
+See [EXAMPLES.md](EXAMPLES.md) for worked examples.

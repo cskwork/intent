@@ -1,6 +1,6 @@
 # intent
 
-An agent skill that explains **why** a change, feature, fix, or decision exists — not just what it does.
+An agent skill that explains what a pasted text or a code change **wants and why** — not just what it says or does.
 It climbs an evidence ladder (ticket → commits → diff → docs → data → conversation), labels every
 claim as stated / inferred / unknown, and reports conflicts between documents and the source of truth.
 
@@ -30,24 +30,19 @@ Or just ask: "why was this changed?", "what's the point of this PR?", "이 수�
 
 ## Output
 
-1. Before
-2. Problem, with measured impact when cheap to get
-3. What the change achieves, each item cited
-4. One-line summary
-5. Unknown / conflicting
+Two skeletons, one per mode (text / change): see `SKILL.md`.
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `SKILL.md` | Instructions the agent loads |
-| `REFERENCE.md` | Evidence ladder, claim labels, output skeleton, pitfalls |
-| `EXAMPLES.md` | A worked example |
+| `REFERENCE.md` | Text-mode procedure, evidence ladder, pitfalls, subject resolution |
+| `EXAMPLES.md` | Worked examples |
 
 ## Principles
 
 - Read-only. Never edits, commits, or posts.
 - No invented motives. "Not stated" is a valid answer.
-- A cited decision is not evidence until the decision itself is found.
 
 MIT License.

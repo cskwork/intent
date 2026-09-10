@@ -28,7 +28,7 @@ Subject: a long, rambling message from a project manager, pasted by the user.
 
 Subject: a bug ticket that changed how a dashboard classifies "strong" and "weak" concepts.
 
-## Evidence gathered
+### Evidence gathered
 
 | Rung | Finding |
 |---|---|
@@ -39,7 +39,7 @@ Subject: a bug ticket that changed how a dashboard classifies "strong" and "weak
 | 5 Data | dev DB: 29% of score rows fell in the retired middle zone; 104 of 362 course/unit/lecture combinations had scores but zero learning history. |
 | 6 Conversation | User: "the policy to keep is the existing KC logic". |
 
-## Output
+### Output
 
 **Before** — The legacy dashboard classified a concept as strong above 0.5 and weak below 0.5, and only for units the student had actually studied (stated: legacy mapper queries).
 
